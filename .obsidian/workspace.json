@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "ed57c12ec81f0bed",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5fd6d8dd652f870",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "37c6677f5487d324",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9a0b2eb53fbf7f70",
+    "type": "split",
+    "children": [
+      {
+        "id": "4c1c9a0933218fb9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3f9337eb7becd5ec",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "158ff063a2fe6920",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "16e9186031df940a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0f7122136a44c00c",
+    "type": "split",
+    "children": [
+      {
+        "id": "3f910f7c167c41f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aa08635094243ce5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "d0455fecd9c06303",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "580db298e1d7a6eb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "5a197fa7de7a9751",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "3d2c852396697d52",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "37c6677f5487d324",
+  "lastOpenFiles": [
+    "buildings/temporary-script-buildings.md",
+    "getting-started/checksum-and-gameplay-mods.md",
+    "scripted-effects/location-iteration-effects.md",
+    "economy/player-rgo-conversion-design.md",
+    "economy/columbian-exchange-rgo-pattern.md",
+    "economy/change-raw-material.md",
+    "gui/ui-overhaul-niche-patterns.md",
+    "localization/multi-file-loc-split-for-ui-mods.md",
+    "gui/mapmode-hover-preview.md",
+    "gui/mass-action-ui-counter.md",
+    "gui/script-values-and-roi-in-gui.md",
+    "tooling/trait-filter-codegen.md",
+    "gui/ui-override-file-layering.md",
+    "community-mod-framework/dual-settings-ui-fallback.md",
+    "gui/cmfg-vanilla-type-extraction.md",
+    "community-mod-framework/glorp-ui-cmf-worked-example.md",
+    "gui/hud-value-sync.md",
+    "community-mod-framework/cross-mod-gui-integration.md",
+    "community-mod-framework/cmm-aliases-for-gui.md",
+    "references/glorp-ui-as-reference.md",
+    "community-mod-framework/dependency-check-popup.md",
+    "community-mod-framework/toolkit-and-visual-editor.md",
+    "community-mod-framework/gui-macros-and-widget-overrides.md",
+    "community-mod-framework/utility-triggers-and-effects.md",
+    "community-mod-framework/mod-banners-and-action-log.md",
+    "community-mod-framework/action-bar-and-alerts.md",
+    "community-mod-framework",
+    "interactions",
+    "military",
+    "tooling",
+    "gui",
+    "map",
+    "economy",
+    "buildings",
+    "total-conversion"
+  ]
+}
