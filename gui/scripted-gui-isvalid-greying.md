@@ -53,6 +53,44 @@ my_open = {
 
 Wrap gate triggers in `custom_description = { text = … }` so failure reasons can surface in tooltips.
 
+# Invalid tooltip when greyed (FB-014 pattern)
+
+ScriptedGui has no `invalid_tooltip` field. For EU5-style **conditions** list on a greyed button:
+
+1. **`tooltipwidget`** on the button (shows while disabled — unlike `action_tooltip` alone).
+2. **`action_tooltip` → `conditions`** — loc key with per-line `@trigger_yes!` / `@trigger_no!` text.
+3. **`type = location` customizable localization** — one entry per gate; pick yes/no loc key from trigger.
+4. Composite loc key joins lines via `[Location.Custom('gate_line')]`.
+
+```gui
+tooltipwidget = { using = my_button_tooltip }
+
+action_tooltip = {
+	conditions = "my_open_conditions_tt"
+	enabled = "[GetScriptedGui('my_open').IsValid(...)]"
+	…
+}
+```
+
+```yml
+my_open_conditions_tt: "[Location.Custom('my_tt_line_a')]\n[Location.Custom('my_tt_line_b')]"
+my_tt_line_a_yes: "@trigger_yes! Requirement met"
+my_tt_line_a_no: "@trigger_no! Requirement failed"
+```
+
+Inside `my_button_tooltip`, use **`TooltipTextBlock`** (or **`TooltipRequirementsList`** only with a valid `GetLines` loc key) for invalid-state lines. Build multi-line **`text`** via **binary-only** **`Concatenate`** in GUI scope — EU5 rejects 3+ arguments. Join lines with **`'\\n'`** in `.gui` sources (single `\` breaks the lexer). One `@trigger_yes` / `@trigger_no` line per gate via `Location.Custom('gate_line')`.
+
+```gui
+TooltipTextBlock = {
+	visible = "[Not(GetScriptedGui('my_open').IsValid(...))]"
+	blockoverride "text" {
+		text = "[Concatenate(Location.Custom('my_tt_line_a'), Concatenate('\\n', Location.Custom('my_tt_line_b')))]"
+	}
+}
+```
+
+Do **not** put `Location.Custom()` inside a static loc key passed to `textcontext` — it will not expand and shows "Conditions: none".
+
 # See also
 
 * [UI override file layering](/gui/ui-override-file-layering.md) — KI-063 IsShown trap

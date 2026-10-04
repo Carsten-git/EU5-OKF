@@ -20,7 +20,7 @@ The **Historical** conversion profile uses:
 
 1. **Pool** — `region,family,good` rows (goods present on vanilla tiles in that region × family).
 2. **Matrix** — up to **5** convert-to staples per `(region, family)` cell, ranked by `default_market_price`.
-3. **Codegen** — `generate_presence_triggers.py` writes `00_rgo_conv_hist_generated_*.txt` in the mod repo.
+3. **Codegen** — `generate_presence_triggers.py` writes `00_rgo_conv_hist_generated_*.txt` and `00_rgo_conv_hist_generated_wool_america_unlock.txt` (historical wool OR helper referenced from staple allows).
 
 **Broad** profile is unchanged (macro × family in `terrain-goods-v2.md`).
 
