@@ -10,6 +10,7 @@ Estate upkeep, market demand, goods baskets, RGO changes, and take-off balancing
 * [RGO UI profit metrics](rgo-ui-profit-metrics.md) — wealth / tax base / income; GUI APIs vs script
 * [RGO baseline output and price balance](rgo-baseline-output-and-price-balance.md) — defines hypothesis, goods table, scoring tradeoffs
 * [Goods food vs market price](goods-food-vs-market-price.md) — food field vs price_in_market
+* [Land good as development sink](land-good-development-sink.md) — synthetic `land` good from dev, PM consumption (MnT)
 * [price_in_market in script](price-in-market-script-api.md) — live price triggers; same-market compare
 * [RGO conversion AI market decision](rgo-conversion-ai-market-decision.md) — pulse / Columbian patterns (generic)
 

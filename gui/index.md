@@ -22,5 +22,6 @@ Scripted GUI, HUD sync, map modes, and UI-overhaul architecture (MnT + Glorp + C
 * [Search filters for lists](search-filters-for-lists.md) — `gui/filters/` (CM-2)
 * [Context-specific widget aliases](context-specific-widget-aliases.md) — `_pl` / `_bv` wrappers (CM-3)
 * [Mass opt-in / opt-out location flags](mass-opt-in-opt-out-location-flags.md) — mass + exclusion vars (CM-4)
+* [Scripted GUI building visibility filters](scripted-gui-building-visibility-filters.md) — hide RGO-replacement buildings (MnT)
 
 Reference maps: [Construction Manager](/references/construction-manager-as-reference.md) · [Zorange mapmodes](/references/zorange-mapmode-collection-as-reference.md)

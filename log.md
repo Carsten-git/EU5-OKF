@@ -1,5 +1,71 @@
 # Bundle Update Log
 
+## 2026-09-30 — Country Disasters and destructive city collapse
+
+* [Country Disasters and event pools](events/country-disasters-and-event-pools.md) — use ordinary DHEs for routine flavor and a visible `common/disasters` lifecycle for sustained severe pressure; no invented route meter is required.
+* [Destructive city collapse](events/destructive-city-collapse.md) — direct capital move, completed-building iterator, current `rgo_level` reset-to-one arithmetic, and exact timed migration penalty.
+* Updated [Change raw material](economy/change-raw-material.md), the [events index](events/index.md), and the [agent topic router](references/agent-topic-router.md).
+* Vanilla comparison added: Disaster pools are normally non-linear; live `can_end` state is progression; repeatable vanilla Disasters omit `fire_only_once`; and a separate terminal DHE avoids keeping a recovered country in a generations-long Disaster.
+
+## 2026-09-30 — Percent line keeps its current share
+
+* [Formable countries overview](formables/formable-countries-overview.md) — a location-percent tooltip shows the current share and prints inner triggers on the first location in the set. `custom_tooltip` belongs on the inner owner test. Wrapping the percent iterator hides the current share. [KI-052](validation/known-issues.md).
+
+## 2026-09-30 — Advance requires cannot point at a later file
+
+* [Regional and conditional advances](advances/regional-and-conditional-advances.md) — `requires` is resolved as each advances file is read, in filename order. A parent in a later file is dropped and the advance sits on a common root. [KI-084](validation/known-issues.md).
+
+## 2026-09-30 — Form button target is fraction times the set
+
+* [Formable countries overview](formables/formable-countries-overview.md) — empty geographic set prints `0/0` and a stray highlight; a target count on a real area set is `target / set_size`. `owns = location:` does not move the chip. The highlight’s example location is the first location of the earliest included area in `definitions.txt`. [KI-083](validation/known-issues.md).
+
+## 2026-09-29 — Start hook and formable land count
+
+* [On game start](on-actions/on-game-start.md) — fires once before country selection, not on save load. Wiki On action and the CMF `on_game_load` split.
+* [Formable countries overview](formables/formable-countries-overview.md) — `required_locations_fraction` is own land only (`SPA_f`). Half of several areas, including a subject type, is a scripted geography plus `any_location_in_scripted_geography` at `percent >= 0.5`.
+
+## 2026-09-29 — Formable REPLACE is the standard single-key patch
+
+* [Formable countries overview](formables/formable-countries-overview.md) — `REPLACE:MAY_f` replaces one entry; restate the whole block; do not copy `00_formable_countries.txt`. Wiki Mod compatibility plus the override ladder. `INJECT:` cannot fill an `allow` or `form_effect` that already exists.
+* [Agent topic router](references/agent-topic-router.md) — formable row
+
+## 2026-07-27 — Tradeable Maps extract (economy diplomacy, exploration)
+
+* [Country interactions — economy diplomacy and gold](interactions/country-interactions-economy-diplomacy-gold.md) — `price_modifier` multiply, payer/payee, deterministic accept, script_values pricing
+* [Map knowledge diplomacy pattern](interactions/map-knowledge-diplomacy-pattern.md) — steal_maps/share_maps parity, exploration cleanup
+* [Steam Workshop BBCode changelog](tooling/steam-workshop-bbcode-changelog.md) — `STEAM_UPDATE_*.bbcode` pattern
+* Updated: [common pitfalls](validation/common-pitfalls.md) (zero-gold payment), [agent topic router](references/agent-topic-router.md), [knowledge coverage](references/knowledge-coverage.md), section indexes
+* Bundle **0.31**
+
+## 2026-07-20 — MnT P2 gaps (peace, land good, event loc)
+
+* [Custom peace treaties](military/custom-peace-treaties.md) — REPLACE `dismantle_fortifications`, location targeting
+* [Land good as development sink](economy/land-good-development-sink.md) — synthetic good pattern (MnT stubs)
+* [Main menu event localization mirror](localization/main-menu-event-localization-mirror.md) — `main_menu/localization/english/events/`
+* Updated: [knowledge coverage](references/knowledge-coverage.md), [agent topic router](references/agent-topic-router.md), section indexes
+* Bundle **0.30**
+
+## 2026-07-20 — MnT GitHub extract (MnT-EU5 Docs MCP)
+
+* [GitHub CI mod hygiene](tooling/github-ci-mod-hygiene.md) — PR BOM, LF, changelog workflows
+* [Error log cleaner and rotation](tooling/error-log-cleaner-rotation.md) — dedupe, `!! NEW !!`, rotation
+* [Scripted GUI building visibility filters](gui/scripted-gui-building-visibility-filters.md) — global hidden-building list + toggles
+* [REPLACE generic actions](interactions/replace-generic-actions.md) — `destroy_market` pattern, `price_in_market` AI
+* [Subject type overrides](governments/subject-type-overrides.md) — vassal/march field patches
+* Updated: [total-conversion toolchain](tooling/total-conversion-toolchain.md), [data-binding macros](tooling/data-binding-macros.md), [MEIOU reference](total-conversion/meiou-and-taxes-reference.md), [agent topic router](references/agent-topic-router.md), [knowledge coverage](references/knowledge-coverage.md)
+* Bundle **0.29**
+
+## 2026-07-18 — Telemetry BOM failure (KI-078)
+
+* [Known issues](validation/known-issues.md) — **KI-078**: `error.log` logs loc key (`rgo_conv_ai_pick_log`) when debug telemetry yml lacks UTF-8 BOM; exports find 0 `SIRE_*` rows while conversions still run
+* [UTF-8 BOM requirement](localization/utf8-bom-requirement.md) — telemetry partial-failure table + verification grep
+* [Script logging and telemetry](validation/script-logging-and-telemetry.md) — symptom quick reference, hot-reload nuance
+
+## 2026-07-18 — Bundle README
+
+* [README.md](README.md) — human entry point: paths, quick start, layout, contributing
+* [index.md](index.md) — link to README from catalog
+
 ## 2026-07-18 — REQ-007 codegen + Sire doc path fixes
 
 * [REQ-007 presence codegen](tooling/req007-presence-codegen.md) — CSV pool/matrix → scripted triggers
@@ -41,7 +107,7 @@
 * [Script logging and telemetry](validation/script-logging-and-telemetry.md) — binding matrix, vanilla `error_log` survey, `price_in_market` vs `GetMarket.GetPrice`, ship discipline
 * Rewrote [Script telemetry via hidden events](validation/script-telemetry-via-hidden-events.md) — owner `save_scope_as` + dual `p_*` / `ui_*` recipe (REQ-009)
 * Updated [Error log debugging](validation/error-log-debugging.md) — binding failure grep patterns
-* [KI-075](validation/known-issues.md) — telemetry binding mistakes
+* [KI-078](validation/known-issues.md) — telemetry loc key only (missing BOM)
 * Bundle **0.24**
 
 ## 2026-07-15 — Script telemetry via hidden events

@@ -166,9 +166,18 @@ See [price_in_market in script](/economy/price-in-market-script-api.md), [Goods 
 
 | Pitfall | Fix |
 |---------|-----|
-| Edited script/loc not picked up | **Fully quit EU5** — new game alone does not reload script |
+| Edited script/loc not picked up | **Fully quit EU5** for script changes; loc/BOM fixes **may** hot-reload but verify with grep — do not rely on hot reload alone ([KI-030](/validation/known-issues.md)) |
 | Lexer: `should be in utf8-bom encoding` | Save `.txt` / `.yml` as UTF-8 **with BOM** ([KI-060](/validation/known-issues.md)) |
 | Loc keys missing | BOM + `*_l_english.yml` suffix |
+| `error.log` shows `rgo_conv_ai_pick_log` not `SIRE_AI_PICK …` | Debug telemetry yml missing BOM — engine logs unresolved key; fix both mirrors ([KI-078](/validation/known-issues.md)) |
+
+# Symptom quick reference
+
+| `error.log` line tail | Meaning |
+|-----------------------|---------|
+| `SIRE_AI_PICK year=…` | Telemetry OK — parsers work |
+| `rgo_conv_ai_pick_log` | Loc key unresolved — check UTF-8 BOM on debug yml ([KI-078](/validation/known-issues.md)) |
+| `SIRE_AI_TRY` / `rgo_conv_ai_try_log` | Same pattern for funnel events |
 
 # Grep and parse
 
@@ -204,7 +213,8 @@ flowchart TD
 * [Script telemetry via hidden events](script-telemetry-via-hidden-events.md) — copy-paste recipe
 * [Error log debugging](error-log-debugging.md) — log folder, crash dumps
 * [Data-binding macros](/tooling/data-binding-macros.md) — MnT preprocessor
-* [Known issues KI-075](known-issues.md) — common telemetry mistakes
+* [Known issues KI-075](known-issues.md) — binding mistakes
+* [Known issues KI-078](known-issues.md) — loc key only in `error.log` (missing BOM)
 
 # Citations
 

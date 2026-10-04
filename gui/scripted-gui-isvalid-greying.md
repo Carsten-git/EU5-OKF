@@ -78,7 +78,9 @@ my_tt_line_a_yes: "@trigger_yes! Requirement met"
 my_tt_line_a_no: "@trigger_no! Requirement failed"
 ```
 
-Inside `my_button_tooltip`, use **`TooltipTextBlock`** (or **`TooltipRequirementsList`** only with a valid `GetLines` loc key) for invalid-state lines. Build multi-line **`text`** via **binary-only** **`Concatenate`** in GUI scope — EU5 rejects 3+ arguments. Join lines with **`'\\n'`** in `.gui` sources (single `\` breaks the lexer). One `@trigger_yes` / `@trigger_no` line per gate via `Location.Custom('gate_line')`.
+Inside `my_button_tooltip`, define the template in **`gui/aaa_*.gui`** (or another file that sorts **before** the host widget file). If `location_window.gui` references `using = my_button_tooltip` before the template file loads, the engine drops the button with no obvious in-game error.
+
+Use **`TooltipTextBlock`** for invalid-state lines. Build multi-line **`text`** via **binary-only** **`Concatenate`** in GUI scope — EU5 rejects 3+ arguments. Join lines with **`'\\n'`** in `.gui` sources (single `\` breaks the lexer). Prefer **`tooltipwidget`** for greyed gate text; omit heavy `Concatenate` from `action_tooltip` **`conditions`** unless validated in-game.
 
 ```gui
 TooltipTextBlock = {

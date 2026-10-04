@@ -16,7 +16,8 @@ Advances are country research nodes defined as plain-text blocks under `in_game/
 |---------|--------------|----------|
 | Age buckets | `0_age_of_traditions.txt` | Global advances grouped by age |
 | Country tag | `country_TEU.txt`, `country_HUN.txt` | Nation-specific advances |
-| Culture / religion / region | `culture_group_german.txt`, `religion_catholic.txt` | Shared unlock pools |
+| Culture / religion / region | `culture_thai.txt`, `religion_orthodox.txt`, `region_indonesia.txt` | Shared unlock pools — see [Regional and conditional advances](regional-and-conditional-advances.md) |
+| Age focus pools | `4_choices_adm.txt`, `4_choices_dip.txt`, `4_choices_mil.txt` | `for = adm/dip/mil` + `set_age_preference` from `ages_of_eu.1` |
 | Unlock packs | `1_building_unlocks.txt`, `2_army_unlocks.txt` | Building and unit gates |
 | Mod country pack | `count_TEU_northern_crusade.txt` | Mod convention — any descriptive name works |
 

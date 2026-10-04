@@ -82,6 +82,12 @@ Documents/Paradox Interactive/Europa Universalis V/
 | Static modifier examples | `main_menu/common/static_modifiers/country.txt` |
 | Static modifier loc | `main_menu/localization/english/static_modifiers_l_english.yml` |
 | Advance loc | `main_menu/localization/english/advances_l_english.yml` |
+| Economy diplomacy (art) | `in_game/common/country_interactions/request_work_of_art_purchase.txt`, `sell_work_of_art.txt` |
+| Map gift / theft | `in_game/common/country_interactions/share_maps.txt`, `steal_maps.txt` |
+| Country interaction readme | `in_game/common/country_interactions/readme.txt` — payer, payee, `price_modifier` |
+| Exploration actions | `in_game/common/generic_actions/explorers.txt` |
+| Diplomacy prices | `in_game/common/prices/03_diplomacy.txt` |
+| Diplomatic script values | `in_game/common/script_values/diplomatic_values.txt` |
 
 # Mod reference (Northern Crusade)
 

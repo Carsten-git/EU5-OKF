@@ -41,6 +41,23 @@ error_log = "::TG::[GetCurrentYear]:[TC.GetTag]:[TCHasInst('feudalism')]:[TCEN.G
 
 Gate dumps with global vars; fire yearly from a coordinator country. Parse with external tools ([toolchain](/tooling/total-conversion-toolchain.md)).
 
+# Delimiter prefixes and column order
+
+Document column order **next to** `log_parser.py` and in this table. MnT `SYS-scripted_effect.txt` uses:
+
+| Prefix | Scope | Columns (colon-separated after prefix) |
+|--------|-------|----------------------------------------|
+| `::POP::` | Region | year, region_name, total_population |
+| `::GP::` | Good × region | year, good_name, region_name, avg_market_price |
+| `::BT::` | Building × region | year, building_type, level_count, region_name |
+| `::MK::` | Market | year, market_name, food, food_stockpile, max_stockpile, stockpile_%, monthly_food, monthly_balance, food_price, burgher_imports, burgher_exports, total_traded, merchant_capacity |
+| `::RT::` | Road × region | year, region_name, road_type, locations_total, locations_with_road |
+| `::TG::` | Country | year, tag, map_name, area, country_type, government, income, current_research, institutions…, estate gold/balance columns, SLV averages — see source for full macro-expanded list |
+
+Societal value axes log on **separate lines** after each `::TG::` row (one line per `societal_value_type`).
+
+Toggle globals: `is_logging_yearly_non_country_information`, `is_logging_yearly_country_information` (set via `SYS-CENSUS.txt` orphan events).
+
 # Scope
 
 MnT uses macros in **scripted effects / error_log**, not in `.gui` files (GUI uses native bindings like `[GetCompleteVersionInfoString]`).

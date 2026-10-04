@@ -1,13 +1,14 @@
 ---
 okf_version: "0.1"
-bundle_version: "0.28"
+bundle_version: "0.31"
 ---
 
 # EU5 Modding Knowledge
 
 Open Knowledge Format bundle for **Europa Universalis V** mod development.
 
-> **Status:** v0.28 — RGO balance telemetry pipeline (save market history + pick logs).
+> **Status:** v0.31 — economy diplomacy gold, map knowledge pattern, Workshop BBCode changelog.  
+> **Human entry:** [README.md](README.md)
 
 ## Start here
 

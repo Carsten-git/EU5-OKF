@@ -42,7 +42,12 @@ Common `potential` patterns:
 
 - `has_or_had_tag = TEU` — survives tag change via formables
 - `culture = culture:hungarian` or merged-culture OR blocks
+- `culture = { has_culture_group = culture_group:iberian_group }`
+- `religion = religion:orthodox` or `religion.group = religion_group:christian`
+- `original_capital ?= { region = region:indonesia_region }` — regional tree (REQ-012)
 - `government = monarchy` / reform checks
+
+Full vanilla matrix: [Regional and conditional advances](regional-and-conditional-advances.md).
 
 # Modifier stat keys
 

@@ -54,7 +54,7 @@ Inside the effect: map each `raw_material` to `RGO_building_*`, then zero vanill
 
 # UI visibility
 
-Do not delete building types to hide them. Populate a **global variable list** of hidden types at start; scripted GUI `is_shown` checks the list + a player toggle. See [Custom UI patterns](/gui/custom-ui-patterns.md).
+Do not delete building types to hide them. Populate a **global variable list** of hidden types at start; scripted GUI `is_shown` checks the list + a player toggle. See [Scripted GUI building visibility filters](/gui/scripted-gui-building-visibility-filters.md) and [Custom UI patterns](/gui/custom-ui-patterns.md).
 
 # Codegen
 

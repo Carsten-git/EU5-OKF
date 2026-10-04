@@ -12,6 +12,7 @@ status: complete
 | Symptom | Likely cause | Article |
 |---------|----------------|---------|
 | Raw `event.id.title` in popup | Missing BOM, wrong yml filename, or `.0` event id | [BOM](/localization/utf8-bom-requirement.md), [event IDs](/events/event-id-rules.md) |
+| `error.log` shows `rgo_conv_ai_pick_log` not `SIRE_AI_PICK` | Debug telemetry yml without BOM ([KI-078](/validation/known-issues.md)) | `utf-8-sig` on both loc mirrors; grep `SIRE_AI_PICK` after play |
 | Event never fires | Invalid `trigger_event =` | [Triggering events](/events/triggering-events.md) |
 | Intro works on new game only | `on_game_start` not save-safe | [Country pulses](/on-actions/country-pulses.md) |
 | DHE entry missing | No `dynamic_historical_event` or bad `historical_info` | [DHE visibility](/events/dhe-browser-visibility.md) |
@@ -39,6 +40,7 @@ status: complete
 | Mod advance locked behind institution forever | `requires` institution age root | [Age roots](/advances/age-roots-and-institution-gates.md) |
 | Crash in main menu blamed on gameplay mod | Vulkan `ErrorDeviceLost` / frontend Idler | [Crashes mods vs graphics](/validation/diagnosing-crashes-mods-vs-graphics.md) |
 | Typos in advance bonuses | Unknown key — no log line | [Mod validation tooling](/validation/mod-validation-tooling.md) |
+| Diplomacy shows price but **no gold** moves | `price_modifier` × base; `gold = 0` in `prices/` | [Economy diplomacy gold](/interactions/country-interactions-economy-diplomacy-gold.md) |
 
 # Process pitfalls
 

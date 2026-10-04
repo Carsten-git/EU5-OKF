@@ -39,6 +39,7 @@ Path on this machine:
 | `unknown modifier` / invalid key (when present) | Bad stat key | Cross-check [modifier stat keys](/modifiers/modifier-stat-keys.md) |
 | `diplomatic_action_scripted.cpp` | Scripted interaction missing `category` | Add category field to interaction def |
 | `Could not find promote` / `Failed converting statement` | `error_log` loc binding invalid for scope | See [Script logging and telemetry](script-logging-and-telemetry.md) binding matrix |
+| `rgo_conv_ai_pick_log` (or other `*_log` key) with **no** `SIRE_*` prefix | Telemetry loc yml missing UTF-8 BOM — bindings not loaded | [KI-078](known-issues.md), [UTF-8 BOM](/localization/utf8-bom-requirement.md) |
 
 Many mod mistakes (**wrong modifier key on advances**, **event never fires**) produce **no** log line. Combine log reading with [smoke testing](smoke-testing-checklist.md) and [validate_mod.py](mod-validation-tooling.md).
 
@@ -54,7 +55,7 @@ Bare `error_log` in **scripted_effects** has **no usable ROOT/SCOPE** — only g
 | `Failed converting statement for '…'` | Binding omitted from printed line — field will be missing |
 | `Variable '…' is set but is never used` … `localization doesn't count` | Expected for telemetry `set_variable` |
 
-After editing telemetry files, **fully quit EU5** before testing; a new campaign does not reload script.
+After editing telemetry files, **fully quit EU5** before testing script changes; a new campaign does not reload script. **Loc/BOM fixes may hot-reload** in-session — verify with `Select-String … SIRE_AI_PICK` ([KI-078](known-issues.md)).
 
 # Filtering tips
 

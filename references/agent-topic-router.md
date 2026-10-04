@@ -44,12 +44,17 @@ Use this page when you know the **capability** you need but not which section. P
 | AI convert using market economics | [RGO conversion AI market decision](/economy/rgo-conversion-ai-market-decision.md) — patterns (generic) |
 | RGO wealth / income / tax base UI vs script | [RGO UI profit metrics](/economy/rgo-ui-profit-metrics.md) |
 | `food` vs goods market price / RGO revenue | [Goods food vs market price](/economy/goods-food-vs-market-price.md) |
+| Synthetic land budget from development | [Land good as development sink](/economy/land-good-development-sink.md) |
 | RGO output per level / default price balance | [RGO baseline output and price balance](/economy/rgo-baseline-output-and-price-balance.md) |
 | Where vanilla master data files live | [Vanilla master data index](/references/vanilla-master-data-index.md) |
 | Construction duration / map ring | [Construction map markers](/buildings/construction-map-markers.md) |
 | AI / monthly pulse cost | [Mod performance pulses and scans](/on-actions/mod-performance-pulses-and-scans.md) |
+| Patch vanilla generic_actions (markets, etc.) | [REPLACE generic actions](/interactions/replace-generic-actions.md) |
+| Economy diplomacy gold (buy/sell, art pattern) | [Country interactions — economy diplomacy gold](/interactions/country-interactions-economy-diplomacy-gold.md) |
+| Map knowledge buy/sell (discover_area) | [Map knowledge diplomacy pattern](/interactions/map-knowledge-diplomacy-pattern.md) |
 | Balance telemetry (save prices + pick logs) | [RGO balance telemetry pipeline](/validation/rgo-balance-telemetry-pipeline.md), [Market price history from save](/validation/market-price-history-from-save.md) |
 | Mass location opt-in/out flags | [Mass opt-in / opt-out location flags](/gui/mass-opt-in-opt-out-location-flags.md) |
+| Hide hundreds of building types in production UI | [Scripted GUI building visibility filters](/gui/scripted-gui-building-visibility-filters.md) |
 
 # Map modes / filters
 
@@ -71,6 +76,38 @@ Use this page when you know the **capability** you need but not which section. P
 | Registration hooks | [Registration and on-action hooks](/community-mod-framework/registration-and-on-action-hooks.md) |
 | Peer mod detection | [Cross-mod GUI integration](/community-mod-framework/cross-mod-gui-integration.md) |
 
+# Military / peace
+
+| Need | Start here |
+|------|------------|
+| Custom peace conference options | [Custom peace treaties](/military/custom-peace-treaties.md) |
+| Naval levy unlock chain | [Naval transport levy chain](/military/naval-transport-levy-chain.md) |
+
+# Events and internal crises
+
+| Need | Start here |
+|------|------------|
+| Routine historical flavor | [Dynamic historical events](/events/dynamic-historical-events.md) |
+| Sustained severe country crisis | [Country Disasters and event pools](/events/country-disasters-and-event-pools.md) |
+| Raze a city and move the capital | [Destructive city collapse](/events/destructive-city-collapse.md) |
+
+# Formables
+
+| Need | Start here |
+|------|------------|
+| New formable, or `REPLACE:` one vanilla formable without copying the file | [Formable countries overview](/formables/formable-countries-overview.md) |
+| `potential`, `allow`, `form_effect` | [Formable triggers and effects](/formables/formable-triggers-and-effects.md) |
+
+# Localization mirrors
+
+| Need | Start here |
+|------|------------|
+| Workshop changelog / update BBCode | [Steam Workshop BBCode changelog](/tooling/steam-workshop-bbcode-changelog.md) |
+| Event loc in main_menu vs in_game | [Main menu event localization mirror](/localization/main-menu-event-localization-mirror.md) |
+| One yml per event script file | [Event localization naming](/localization/event-localization-naming.md) |
+| Game rules loc pairing | [Custom game rules](/game-rules/custom-game-rules.md) |
+| UTF-8 BOM | [UTF-8 BOM requirement](/localization/utf8-bom-requirement.md) |
+
 # Always before novel tricks
 
 | Need | Start here |
@@ -79,7 +116,11 @@ Use this page when you know the **capability** you need but not which section. P
 | Scoped `error_log` from pulses / AI (ROOT nullptr in scripted_effects) | [Script telemetry via hidden events](/validation/script-telemetry-via-hidden-events.md) |
 | Post-ship balance / cobweb from long observer runs | [RGO balance telemetry pipeline](/validation/rgo-balance-telemetry-pipeline.md) |
 | Read `error.log` / binding failure lines | [Error log debugging](/validation/error-log-debugging.md) |
+| Telemetry logs loc key only (`rgo_conv_ai_pick_log` not `SIRE_AI_PICK`) | [KI-078](/validation/known-issues.md), [UTF-8 BOM](/localization/utf8-bom-requirement.md) |
 | MnT-style `::TG::` delimiter dumps | [Total conversion toolchain](/tooling/total-conversion-toolchain.md), [Data-binding macros](/tooling/data-binding-macros.md) |
+| PR CI — BOM, LF, changelog | [GitHub CI mod hygiene](/tooling/github-ci-mod-hygiene.md) |
+| Dedupe error.log / tag NEW lines | [Error log cleaner and rotation](/tooling/error-log-cleaner-rotation.md) |
+| Subject type loyalty / diplomacy patches | [Subject type overrides](/governments/subject-type-overrides.md) |
 
 * [Common pitfalls](/validation/common-pitfalls.md) · [Known issues](/validation/known-issues.md)
 * Grep vanilla `Europa Universalis V/game/` when this router and section indexes are silent

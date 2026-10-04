@@ -7,3 +7,4 @@ Government types and reforms under `in_game/common/government_types/` and `gover
 * [Government types](government-types.md) — custom types and inheritance
 * [Estates and reforms](estates-and-reforms.md) — estate modifiers inside reforms
 * [Societal values and estate power](societal-values-estate-power.md) — REPLACE axes for `global_*_estate_power` + AI control importance
+* [Subject type overrides](subject-type-overrides.md) — patch vassal/march/tributary fields (MnT)

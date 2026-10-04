@@ -14,6 +14,20 @@ status: complete
 
 YAML localization files saved as **UTF-8 without BOM** can fail silently: the game loads zero keys, and UI shows raw loc keys like `flavor_teu_nc_purpose.100.title`.
 
+## Telemetry `error_log` (partial failure — KI-078)
+
+Debug telemetry yml (`rgo_conv_*_log` keys used by `error_log = …` in hidden events) can fail **without** breaking in-game UI:
+
+| With BOM | Without BOM |
+|----------|-------------|
+| `SIRE_AI_PICK year=1340 tag=FRA loc=…` | `rgo_conv_ai_pick_log` (unresolved loc key only) |
+| Export scripts parse rows | `export_*` finds **0** `SIRE_*` lines |
+| Funnel / pick analytics work | Conversions still run — only logging is broken |
+
+**Common cause:** file created by editor/agent `Write` / save-as UTF-8 (no BOM); file never committed so BOM was never enforced in review.
+
+**Always mirror** debug loc under `in_game/localization/english/` **and** `main_menu/localization/english/` — both need exactly **one** BOM at file start (not zero, not two — see [KI-081](/validation/known-issues.md)).
+
 ## Script / data files
 
 `in_game` / `main_menu` script files (`.txt` under `common/`, `events/`, etc.) also prefer **UTF-8 with BOM**. Without it, `error.log` shows:
@@ -44,15 +58,26 @@ path.write_text(content, encoding="utf-8")      # metadata.json only
 
 - Hex editor: BOM is `EF BB BF` at the start (loc/scripts).
 - Loc: in-game titles show prose, not dotted keys.
+- Telemetry: after a few months with AI on, `error.log` contains expanded `SIRE_AI_PICK` / `SIRE_MARKET_PRICE` lines — not bare `rgo_conv_ai_pick_log`.
 - Scripts: no `should be in utf8-bom encoding` spam for your mod files in `error.log`.
+
+```powershell
+# Quick BOM check (first 3 bytes = EF BB BF)
+Format-Hex -Path "in_game\localization\english\rgo_conv_debug_l_english.yml" -Count 3
+
+# After play session
+Select-String -Path "$env:USERPROFILE\Documents\Paradox Interactive\Europa Universalis V\logs\error.log" -Pattern "SIRE_AI_PICK"
+```
 
 # See also
 
 * [Event localization naming](event-localization-naming.md)
 * [Common pitfalls](/validation/common-pitfalls.md)
-* [Known issues](/validation/known-issues.md) — KI-010, KI-060
+* [Known issues](/validation/known-issues.md) — KI-010, KI-060, KI-078
+* [Script logging and telemetry](/validation/script-logging-and-telemetry.md) — `error_log` binding + BOM
 
 # Citations
 
 [1] Observed during `northern_crusade_teu` — loc without BOM failed silently
 [2] Observed during `rgo_conversion` — script `.txt` without BOM → lexer warnings in `error.log`
+[3] Sire REQ-009 session 2026-07-18 — `rgo_conv_debug_l_english.yml` without BOM → `error.log` key-only telemetry ([KI-078](/validation/known-issues.md))

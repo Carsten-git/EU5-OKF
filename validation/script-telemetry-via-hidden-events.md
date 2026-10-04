@@ -91,6 +91,14 @@ rgo_conversion.901 = {
 
 ## 4. Localization (UTF-8 BOM; mirror under `main_menu/localization/`)
 
+**Required:** save with `utf-8-sig` (UTF-8 **with** BOM). Without BOM the engine often logs the **loc key** (`rgo_conv_ai_pick_log`) instead of the expanded string (`SIRE_AI_PICK year=…`) — see [KI-078](/validation/known-issues.md).
+
+Verify after any edit:
+
+```powershell
+Select-String -Path "…\logs\error.log" -Pattern "SIRE_AI_PICK"
+```
+
 ```yml
 rgo_conv_ai_pick_log: "SIRE_AI_PICK … p_from=[SCOPE.sLocation('rgo_conv_ai_pick_loc').MakeScope.GetVariable('rgo_conv_dbg_p_from').GetValue|2] p_to=[SCOPE.sLocation('rgo_conv_ai_pick_loc').MakeScope.GetVariable('rgo_conv_dbg_p_to').GetValue|2] p_floor=[SCOPE.sLocation('rgo_conv_ai_pick_loc').MakeScope.GetVariable('rgo_conv_dbg_p_floor').GetValue|2] ui_from=[SCOPE.sLocation('rgo_conv_ai_pick_loc').GetMarket.GetPrice(SCOPE.sLocation('rgo_conv_ai_pick_loc').GetRawMaterial)|2] ui_to=[…]"
 ```

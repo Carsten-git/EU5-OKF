@@ -32,8 +32,9 @@ Vanilla `on_game_start` in `_hardcoded.txt` uses a direct `effect = { … }`; **
 
 # Limits
 
-- Runs once per new game — not on save load.
-- Use [country pulses](/on-actions/country-pulses.md) as fallback for migrated saves.
+- Runs once per new game, before country selection. It does not run when a save loads. The wiki [On action](https://eu5.paradoxwikis.com/On_action) row for `on_game_start` says it runs before country selection, so `is_ai` is false until a delayed child action. The Community Mod Framework documents a separate `on_game_load` that fires on every save load and does not fire on a new game, which is only needed because vanilla `on_game_start` does not cover loads.
+- A save created before the mod was added is not rewritten by this hook. Use a [country pulse](/on-actions/country-pulses.md) only when an old save must be patched.
+- Tag-scoped setup (`c:XIU`, `c:HEL`) does not need the player to have picked a country yet.
 
 # See also
 
@@ -46,3 +47,5 @@ Vanilla `on_game_start` in `_hardcoded.txt` uses a direct `effect = { … }`; **
 [1] Vanilla: `game/in_game/common/on_action/_hardcoded.txt` — base `on_game_start` effect block
 [2] Vanilla: `game/in_game/common/on_action/ai_personalities_setup.txt` — chained `on_actions` pattern
 [3] Mod: `northern_crusade_teu/in_game/common/on_action/teu_nc_purpose.txt` — mod `on_game_start` handler
+[4] Wiki: [On action](https://eu5.paradoxwikis.com/On_action) — `on_game_start` runs before country selection
+[5] Wiki: [Community Mod Framework](https://eu5.paradoxwikis.com/Community_Mod_Framework) — `on_game_load` is the save-load hook and does not fire on a new game

@@ -21,15 +21,16 @@ Honest coverage map for agents. **Goal:** enable building new EU5 mods.
 | Glorp + content-mod GUI compat | **Good** |
 | CMM player settings / game rules | **Good** |
 | Lateral-view search filters | **Good** |
-| Systems overhaul (MnT) | **Strong** |
+| Systems overhaul (MnT) | **Strong** — GitHub MCP for ongoing mining |
 | Player RGO change + construction/map UX | **Strong** |
-| Warfare / map TC / deep religion | **Weak** |
+| Economy diplomacy / map commerce (gold transfers) | **Good** — [economy diplomacy gold](/interactions/country-interactions-economy-diplomacy-gold.md), [map knowledge pattern](/interactions/map-knowledge-diplomacy-pattern.md) |
+| Warfare / map TC / deep religion | **Weak** — [custom peace treaties](/military/custom-peace-treaties.md) added; religion/casus belli still thin |
 
 # Source extracts
 
 | Source | Status |
 |--------|--------|
-| MEIOU and Taxes v0.1.6 | Reusable how-tos complete |
+| MEIOU and Taxes v0.1.6 + GitHub `MnT-EU5` | Reusable how-tos complete; CI, log cleaner, scripted GUI filters, generic action REPLACE, subject overrides added 2026-07-20 |
 | Community Mod Framework | Core APIs ingested |
 | Glorp UI v1.3.10.1 | Patterns **#1–31** |
 | Construction Manager `3736668860` | Patterns **CM-1–7** |
@@ -37,7 +38,13 @@ Honest coverage map for agents. **Goal:** enable building new EU5 mods.
 | Player Speed Game Rules `3755676844` | Additive game rules |
 | Vanilla RGO / Columbian Exchange | Economy articles |
 | RGO Conversion / Sire | Live engineering + product OKF |
+| Tradeable Maps | [Map knowledge diplomacy](/interactions/map-knowledge-diplomacy-pattern.md), economy diplomacy gold |
 | Northern Crusade TEU | Early flavor foundation |
+
+# Gaps after MnT GitHub extract (2026-07-20)
+
+* Deep religion / casus belli / wargoal authoring — grep vanilla when needed
+* Full `land` good implementation in MnT repo is commented out — pattern documented; verify before citing as shipped behaviour
 
 # Gaps after ZMC extract
 

@@ -63,11 +63,27 @@ Parse buildings / PMs / advances → Excel for profitability passes. Keep spread
 
 Long balance runs overwrite autosaves. Watch the save folder, rename with in-game date, thin by month interval.
 
+# Error log cleaner
+
+`tools/log_cleaner/process_log.py` dedupes `error.log`, tags `!! NEW !!` lines vs the previous run, and rotates `cleaned_error.log` → `_old` → `_oldest`. Uses the same `config.ini` `log_directory` as other tools. See [Error log cleaner and rotation](/tooling/error-log-cleaner-rotation.md).
+
+# Log grapher (`tools/plot/`)
+
+`log_parser.py` regex-parses delimiter prefixes into DataFrames; `MT_grapher.py` charts them. **`key_configs.json`** maps grapher presets (F1–F12) to filters — e.g. "Goods Prices by Region" → good + region columns matching `::GP::` field order.
+
+Run grapher after enabling [SYS census](/tooling/data-binding-macros.md) telemetry; column order in `SYS-scripted_effect.txt` must match parser expectations.
+
+# GitHub CI
+
+Copy MnT's PR workflows for BOM, LF, and changelog enforcement. See [GitHub CI mod hygiene](/tooling/github-ci-mod-hygiene.md).
+
 # Related
 
 - [CSV location templates](/map/csv-location-templates-pipeline.md)
 - [RGO substitution](/buildings/rgo-to-building-substitution.md)
 - [Error log debugging](/validation/error-log-debugging.md)
+- [Error log cleaner](/tooling/error-log-cleaner-rotation.md)
+- [GitHub CI mod hygiene](/tooling/github-ci-mod-hygiene.md)
 
 # Citations
 

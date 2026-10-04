@@ -93,6 +93,7 @@ Adding `count_TEU_northern_crusade.txt` does **not** replace `country_TEU.txt`. 
 
 # See also
 
+* [Regional and conditional advances](regional-and-conditional-advances.md) — culture, religion, geography, age focus
 * [Advance file structure](advance-file-structure.md)
 * [Starting technology level](starting-technology-level.md)
 * [Advance triggers and modifiers](advance-triggers-and-modifiers.md)

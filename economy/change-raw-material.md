@@ -47,6 +47,21 @@ So “Columbian Exchange worker-cap formula” = **reset expanded RGO back to le
 
 Order in vanilla CE: worker reset → prosperity hit → change good. RGO Conversion follows the same worker reset before applying the new good.
 
+Current vanilla `flavor_swe.38` provides a second, direct **RGO level** form:
+
+```txt
+if = {
+	limit = { rgo_level > 1 }
+	change_max_raw_material_workers = {
+		value = rgo_level
+		subtract = 1
+		multiply = -1
+	}
+}
+```
+
+Use this form when an event must reset the displayed RGO level to 1 while keeping the existing good. Do not call `change_raw_material`. Runtime-check the displayed level, especially when construction is queued.
+
 Also common: `change_prosperity = prosperity_weak_penalty` on the location when the good flips.
 
 QoL conversion (RGO Conversion mod) on complete:
@@ -103,3 +118,4 @@ Design for a timed, employment-based player conversion mod lives in the mod stub
 [2] `in_game/common/generic_actions/columbian_exchange.txt`
 [3] `in_game/common/on_action/_hardcoded.txt` — `on_raw_material_changed`
 [4] `in_game/events/DHE/flavor_flo.txt` — Societas alum
+[5] `in_game/events/DHE/flavor_SWE.txt`, `flavor_swe.38` — `rgo_level` reset to 1

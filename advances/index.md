@@ -8,5 +8,6 @@ Country advances (ideas / tech-tree style unlocks) under `in_game/common/advance
 * [Advance age roots and institution gates](age-roots-and-institution-gates.md) — free vs institution `requires`
 * [Advance triggers and modifiers](advance-triggers-and-modifiers.md) — `potential` vs `allow`, stat keys on advances
 * [Country-specific advances](country-specific-advances.md) — `country_TAG` and `count_TEU` mod pattern
+* [Regional and conditional advances](regional-and-conditional-advances.md) — culture, religion, geography, age focus (`for = adm/dip/mil`)
 * [Starting technology level](starting-technology-level.md) — prevent advances being pre-researched at game start
 * [Advance-gated RGO conversion unlocks](advance-gated-rgo-unlocks.md) — `has_advance` + allow matrix (RGO Conversion)

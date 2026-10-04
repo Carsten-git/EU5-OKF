@@ -66,6 +66,7 @@ The `namespace = flavor_teu_nc_purpose` line in the script prefixes event IDs in
 
 * [DHE browser visibility](/events/dhe-browser-visibility.md)
 * [Event ID rules](/events/event-id-rules.md)
+* [Main menu event localization mirror](/localization/main-menu-event-localization-mirror.md)
 
 # Citations
 
