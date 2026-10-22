@@ -1,13 +1,13 @@
 ---
 okf_version: "0.1"
-bundle_version: "0.31"
+bundle_version: "0.34"
 ---
 
 # EU5 Modding Knowledge
 
 Open Knowledge Format bundle for **Europa Universalis V** mod development.
 
-> **Status:** v0.31 — economy diplomacy gold, map knowledge pattern, Workshop BBCode changelog.  
+> **Status:** v0.34 — government lateral view cabinet-style seat rows (Control reworked stewards).  
 > **Human entry:** [README.md](README.md)
 
 ## Start here

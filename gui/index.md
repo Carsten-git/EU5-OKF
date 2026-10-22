@@ -3,6 +3,7 @@
 Scripted GUI, HUD sync, map modes, and UI-overhaul architecture (MnT + Glorp + CMF + Construction Manager).
 
 * [Custom UI patterns](custom-ui-patterns.md) — scripted GUI, ring-buffer charts, `aaa_` precedence
+* [Government lateral view — cabinet-style seat rows](government-lateralview-cabinet-seat-rows.md) — Local Authorities tab, location list, steward appoint bar (Control reworked)
 * [Custom map modes](custom-map-modes.md) — heatmaps + Glorp/CM/ZMC checklists
 * [Live vs cached mapmode metrics](live-vs-cached-mapmode-metrics.md) — script_value live vs location-var cache (ZMC-1)
 * [Mapmode localization and game concepts](mapmode-localization-and-concepts.md) — loc, legends, textformatting (ZMC-2)
@@ -17,6 +18,7 @@ Scripted GUI, HUD sync, map modes, and UI-overhaul architecture (MnT + Glorp + C
 * [UI overhaul niche patterns](ui-overhaul-niche-patterns.md) — low-pri Glorp (#19/#21/#23)
 * [Glorp location RGO row](glorp-location-window-rgo-row.md) — where to patch RGO in Glorp (#25)
 * [Integrating with Glorp UI](integrating-with-glorp-ui.md) — content-mod compat playbook (#26)
+* [Compatibility with CMF and Glorp UI](/community-mod-framework/compatibility-with-cmf-and-glorp.md) — dependency, registration id, colliding GUI files
 * [Expand raw goods lateral view](expand-raw-goods-lateralview.md) — bulk RGO panel + row injection (#30)
 * [Off-screen scripted widget drivers](offscreen-scripted-widget-drivers.md) — CM construct queues / classification (CM-1)
 * [Search filters for lists](search-filters-for-lists.md) — `gui/filters/` (CM-2)
