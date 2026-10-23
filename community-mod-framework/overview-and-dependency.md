@@ -42,6 +42,7 @@ Reference integration: [submods/cmf-example-mod](https://github.com/Europa-Unive
 # Related
 
 * [Registration hooks](/community-mod-framework/registration-and-on-action-hooks.md)
+* [Compatibility with CMF and Glorp](/community-mod-framework/compatibility-with-cmf-and-glorp.md)
 * [Mod metadata](/getting-started/mod-metadata-and-descriptor.md)
 * [Dependency check popup](/community-mod-framework/dependency-check-popup.md)
 

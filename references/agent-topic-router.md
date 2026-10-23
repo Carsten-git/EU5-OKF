@@ -27,7 +27,7 @@ Use this page when you know the **capability** you need but not which section. P
 | Need | Start here |
 |------|------------|
 | Pattern map | [Glorp UI as reference](/references/glorp-ui-as-reference.md) |
-| Compat with content mods | [Integrating with Glorp UI](/gui/integrating-with-glorp-ui.md) |
+| Compat with content mods | [CMF and Glorp compatibility](/community-mod-framework/compatibility-with-cmf-and-glorp.md), then [Integrating with Glorp UI](/gui/integrating-with-glorp-ui.md) |
 | Where RGO controls live in Glorp | [Glorp location RGO row](/gui/glorp-location-window-rgo-row.md) |
 | Bulk RGO lateral view | [Expand raw goods lateral view](/gui/expand-raw-goods-lateralview.md) |
 | File REPLACE / type shadowing | [UI override file layering](/gui/ui-override-file-layering.md) |
@@ -47,6 +47,7 @@ Use this page when you know the **capability** you need but not which section. P
 | Synthetic land budget from development | [Land good as development sink](/economy/land-good-development-sink.md) |
 | RGO output per level / default price balance | [RGO baseline output and price balance](/economy/rgo-baseline-output-and-price-balance.md) |
 | Where vanilla master data files live | [Vanilla master data index](/references/vanilla-master-data-index.md) |
+| Province-capital / local-governor-style building | [Governor-style capital buildings](/buildings/governor-style-capital-buildings.md) |
 | Construction duration / map ring | [Construction map markers](/buildings/construction-map-markers.md) |
 | AI / monthly pulse cost | [Mod performance pulses and scans](/on-actions/mod-performance-pulses-and-scans.md) |
 | Patch vanilla generic_actions (markets, etc.) | [REPLACE generic actions](/interactions/replace-generic-actions.md) |
@@ -72,6 +73,7 @@ Use this page when you know the **capability** you need but not which section. P
 | Need | Start here |
 |------|------------|
 | Depend on CMF | [Overview and dependency](/community-mod-framework/overview-and-dependency.md) |
+| Stay compatible with CMF and Glorp | [Compatibility with CMF and Glorp](/community-mod-framework/compatibility-with-cmf-and-glorp.md) |
 | Action bar / alerts | [Action bar and alerts](/community-mod-framework/action-bar-and-alerts.md) |
 | Registration hooks | [Registration and on-action hooks](/community-mod-framework/registration-and-on-action-hooks.md) |
 | Peer mod detection | [Cross-mod GUI integration](/community-mod-framework/cross-mod-gui-integration.md) |

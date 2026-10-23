@@ -1,5 +1,26 @@
 # Bundle Update Log
 
+## 2026-10-23 — v0.35 location-scoped modifier catalogue
+
+* **Creation**: [Location-scoped modifier types](modifiers/location-scoped-modifier-types.md) — categorized vanilla `game_data.category = location` modifier type catalogue extracted from `main_menu/common/modifier_type_definitions/00_modifier_types.txt`.
+* **Coverage**: 423 location-scoped modifiers grouped into goods output, goods establishment speed, estate / wealth-share levers, pop mechanics, RGO/building production, control/proximity/development, food, trade/market/maritime, military, disease/religious movements, unrest, and miscellaneous location rules.
+* **Finding**: local estate levers affect estate power, wealth share, unrest, and peasant enfranchisement; no local equivalent of `nobles_estate_max_tax` exists in vanilla modifier types.
+* **Update**: [Modifiers index](modifiers/index.md), [Vanilla master data index](references/vanilla-master-data-index.md), and root [index](index.md) now link the catalogue.
+* **Version**: bumped `bundle_version` from 0.34 to 0.35.
+
+## 2026-10-22 — v0.33 governor-style capital buildings
+
+* **Creation**: [Governor-style capital buildings](buildings/governor-style-capital-buildings.md) — vanilla local-governor settlement rules, separate location/country caps, construction and maintenance baselines, AI markers, and the observed `local_nobles_estate_power` scale.
+* **Validation**: confirmed `is_province_capital` in vanilla building eligibility and documented location-scoped `remove_if` for completed-building cleanup; active-construction cancellation remains a required runtime test.
+* **Update**: [Buildings index](buildings/index.md) and [agent topic router](references/agent-topic-router.md) now route province-capital and local-governor-style building work to the new reference.
+* **Version**: bumped `bundle_version` from 0.32 to 0.33.
+
+## 2026-10-14 — CMF and Glorp compatibility contract
+
+* [Compatibility with CMF and Glorp UI](community-mod-framework/compatibility-with-cmf-and-glorp.md) — dependency, registration id vs launcher id (`glorpui` vs `glorp.ui`), and the GUI filenames Glorp 10.08.26 replaces outright.
+* Updated [agent topic router](references/agent-topic-router.md), [knowledge coverage](references/knowledge-coverage.md), [common pitfalls](validation/common-pitfalls.md), and [Integrating with Glorp UI](gui/integrating-with-glorp-ui.md).
+* Bundle **0.32**. Installed checks: CMF 2.4.1, Glorp UI 10.08.26. Pattern articles #1–31 remain sourced from Glorp 1.3.10.1.
+
 ## 2026-09-30 — Country Disasters and destructive city collapse
 
 * [Country Disasters and event pools](events/country-disasters-and-event-pools.md) — use ordinary DHEs for routine flavor and a visible `common/disasters` lifecycle for sustained severe pressure; no invented route meter is required.

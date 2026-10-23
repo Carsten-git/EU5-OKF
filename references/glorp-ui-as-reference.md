@@ -12,6 +12,8 @@ resource: steam://workshop/3450310/3601047146
 
 [Glorp UI](https://steamcommunity.com/sharedfiles/filedetails/?id=3601047146) (`glorp.ui` v1.3.10.1) is a CMF-native UI overhaul. Path: `workshop/content/3450310/3601047146`.
 
+What another mod must do to keep working beside current Glorp: [Compatibility with CMF and Glorp UI](/community-mod-framework/compatibility-with-cmf-and-glorp.md) (checked on Glorp 10.08.26).
+
 Depends on: CMF `2.*`, Construction Manager, Autonomous Diplomats, SmartTaxes.
 
 # Pattern index (1–24)

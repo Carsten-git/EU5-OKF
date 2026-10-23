@@ -41,6 +41,8 @@ status: complete
 | Crash in main menu blamed on gameplay mod | Vulkan `ErrorDeviceLost` / frontend Idler | [Crashes mods vs graphics](/validation/diagnosing-crashes-mods-vs-graphics.md) |
 | Typos in advance bonuses | Unknown key — no log line | [Mod validation tooling](/validation/mod-validation-tooling.md) |
 | Diplomacy shows price but **no gold** moves | `price_modifier` × base; `gold = 0` in `prices/` | [Economy diplomacy gold](/interactions/country-interactions-economy-diplomacy-gold.md) |
+| Glorp panel gone, or your location button gone, no crash | You and Glorp both ship the same `in_game/gui/*.gui` (often `location_window.gui`). Later playset entry wins the whole file | [CMF and Glorp compatibility](/community-mod-framework/compatibility-with-cmf-and-glorp.md) |
+| `cmf_is_mod_active` false for Glorp | Checked launcher id `glorp.ui`. Registered CMF id is `glorpui` | [CMF and Glorp compatibility](/community-mod-framework/compatibility-with-cmf-and-glorp.md) |
 
 # Process pitfalls
 

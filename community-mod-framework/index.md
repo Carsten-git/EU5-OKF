@@ -3,6 +3,7 @@
 Shared EU5 framework for multi-mod UI and hooks. Prefer CMF APIs over reinventing menus/alerts when your mod needs player settings or shared UI.
 
 * [Overview and dependency](overview-and-dependency.md)
+* [Compatibility with CMF and Glorp UI](compatibility-with-cmf-and-glorp.md) — what a content mod must ship, and which GUI files collide with Glorp
 * [Registration and on-action hooks](registration-and-on-action-hooks.md)
 * [Community Mod Menu](community-mod-menu.md)
 * [CMM settings catalog design](cmm-settings-catalog-design.md) — tabs, defaults, Glorp worked example (#27)

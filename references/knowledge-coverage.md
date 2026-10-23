@@ -18,7 +18,7 @@ Honest coverage map for agents. **Goal:** enable building new EU5 mods.
 | UI overhaul architecture (Glorp #1–31) | **Strong** |
 | Construction automation UI (CM) | **Good** — [CM reference](/references/construction-manager-as-reference.md) |
 | **Utility / additive map modes** | **Good** — [custom map modes](/gui/custom-map-modes.md), [live vs cached](/gui/live-vs-cached-mapmode-metrics.md), [ZMC reference](/references/zorange-mapmode-collection-as-reference.md) |
-| Glorp + content-mod GUI compat | **Good** |
+| Glorp + content-mod GUI compat | **Strong** — [CMF and Glorp compatibility](/community-mod-framework/compatibility-with-cmf-and-glorp.md) (CMF 2.4.1, Glorp 10.08.26 file list) |
 | CMM player settings / game rules | **Good** |
 | Lateral-view search filters | **Good** |
 | Systems overhaul (MnT) | **Strong** — GitHub MCP for ongoing mining |
@@ -33,6 +33,7 @@ Honest coverage map for agents. **Goal:** enable building new EU5 mods.
 | MEIOU and Taxes v0.1.6 + GitHub `MnT-EU5` | Reusable how-tos complete; CI, log cleaner, scripted GUI filters, generic action REPLACE, subject overrides added 2026-07-20 |
 | Community Mod Framework | Core APIs ingested |
 | Glorp UI v1.3.10.1 | Patterns **#1–31** |
+| Glorp UI 10.08.26 (installed) | Compatibility file list and CMF id `glorpui` — [compatibility playbook](/community-mod-framework/compatibility-with-cmf-and-glorp.md). Pattern articles above are still from 1.3.10.1 |
 | Construction Manager `3736668860` | Patterns **CM-1–7** |
 | **Zorange's Mapmode Collection** `3697317887` | Patterns **ZMC-1–3** — live/cached metrics, loc/concepts, additive checklist |
 | Player Speed Game Rules `3755676844` | Additive game rules |

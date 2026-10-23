@@ -8,6 +8,8 @@ status: complete
 source_mod: glorp.ui
 ---
 
+Contract for any content mod: [Compatibility with CMF and Glorp UI](/community-mod-framework/compatibility-with-cmf-and-glorp.md). Glorp’s detectable id is `glorpui`, not the launcher id `glorp.ui`.
+
 Glorp pattern **#26**: UI overhauls win whole files. Content mods that ship a vanilla-copy `location_window.gui` **replace** Glorp’s location panel; they do not merge and rarely crash — they **hide** features or **revert** Glorp chrome.
 
 # What players see today (typical)
