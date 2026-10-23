@@ -1,13 +1,13 @@
 ---
 okf_version: "0.1"
-bundle_version: "0.34"
+bundle_version: "0.35"
 ---
 
 # EU5 Modding Knowledge
 
 Open Knowledge Format bundle for **Europa Universalis V** mod development.
 
-> **Status:** v0.34 — government lateral view cabinet-style seat rows (Control reworked stewards).  
+> **Status:** v0.35 — categorized vanilla location-scoped modifier catalogue.  
 > **Human entry:** [README.md](README.md)
 
 ## Start here
@@ -15,6 +15,7 @@ Open Knowledge Format bundle for **Europa Universalis V** mod development.
 * [Building a mod with this knowledge base](getting-started/building-a-mod-with-this-kb.md)
 * [Agent topic router](references/agent-topic-router.md) — capability → article (settings, Glorp, RGO, mapmodes)
 * [Vanilla master data index](references/vanilla-master-data-index.md) — where goods, locations, prices live in game files
+* [Location-scoped modifier types](modifiers/location-scoped-modifier-types.md) — categorized vanilla local modifier reference
 * [Knowledge coverage](references/knowledge-coverage.md)
 * [Glorp UI as reference](references/glorp-ui-as-reference.md) — UI overhaul pattern map
 * [Construction Manager as reference](references/construction-manager-as-reference.md) — automation + deep GUI

@@ -78,6 +78,13 @@ See [Goods food vs market price](/economy/goods-food-vs-market-price.md).
 | **Building prices** | Referenced from `building_types/` via `price =` |
 | **Construction baskets** | `goods_demand/` |
 
+# Modifiers
+
+| What | Where | Notes |
+|------|-------|-------|
+| **Modifier type definitions** | `main_menu/common/modifier_type_definitions/00_modifier_types.txt` | Engine-backed modifier keys, `percent` / `boolean` metadata, and `game_data.category` scope |
+| **Location-scoped modifier catalogue** | [Location-scoped modifier types](/modifiers/location-scoped-modifier-types.md) | Categorized list of all `category = location` modifier types: goods output, estate power, pop mechanics, control, trade, military, disease, and miscellaneous location rules |
+
 # Localization
 
 | What | Where |
@@ -92,6 +99,7 @@ See [Goods food vs market price](/economy/goods-food-vs-market-price.md).
 | Topic | Article |
 |-------|---------|
 | All raw materials + default price + inferred output/lv | [RGO baseline output and price balance](/economy/rgo-baseline-output-and-price-balance.md) |
+| All vanilla location-scoped modifier types | [Location-scoped modifier types](/modifiers/location-scoped-modifier-types.md) |
 | Live price in script | [price_in_market](/economy/price-in-market-script-api.md) |
 | Conversion AI scoring | [RGO conversion AI market decision](/economy/rgo-conversion-ai-market-decision.md) |
 
